@@ -91,7 +91,6 @@ h3 {
   text-shadow: 2px 2px rgb(80, 80, 80);
   line-height: 1;
   font-size: 6em;
-  font-size: 8vw;
 }
 .title-right {
   text-align: right;
@@ -100,14 +99,12 @@ h3 {
   text-shadow: 2px 2px rgb(80, 80, 80);
   line-height: 1;
   font-size: 6em;
-  font-size: 8vw;
 }
 .subtitle {
   font-family: "crilleeeflight";
   color: rgb(153, 204, 255);
   text-shadow: 2px 2px rgb(80, 80, 80);
   font-size: 2em;
-  font-size: 2vw;
   position: relative;
   display: flex;
   margin-left: 35%;
@@ -120,7 +117,7 @@ h3 {
   max-width: 60%;
   margin: auto;
   display: flex;
-  padding-top: 10vh;
+  padding-top: 5%;
 }
 .center-box {
   position: relative;
