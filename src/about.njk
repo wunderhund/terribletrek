@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+title: About
+eleventyNavigation:
+  key: About
+  order: 2
+---
+
+{%- for post in collections.posts -%}
+  <p>{{ post.templateContent | safe }}</p>
+{%- endfor -%}
+
+

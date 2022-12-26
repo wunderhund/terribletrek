@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+title: Home
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+<p>Number of episodes posted: {{ collections.posts.length }}</p>
+
+{%- for post in collections.posts -%}
+  <p>{{ post.templateContent | safe }}</p>
+{%- endfor -%}
+
+
