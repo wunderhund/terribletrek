@@ -104,7 +104,7 @@ h3 {
   font-family: "crilleeeflight";
   color: rgb(153, 204, 255);
   text-shadow: 2px 2px rgb(80, 80, 80);
-  font-size: 2em;
+  font-size: 1.5rem;
   position: relative;
   display: flex;
   margin-left: 35%;
@@ -116,7 +116,6 @@ h3 {
   position: relative;
   max-width: 60%;
   margin: auto;
-  display: flex;
   padding-top: 5%;
 }
 .center-box {
@@ -149,7 +148,7 @@ h3 {
   width: 20%;
   z-index: 2;
   margin-left: -20%;
-  margin-top: -10%;
+  margin-top: -2%;
 }
 
 /* NavBar Stuff */
