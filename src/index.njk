@@ -1,14 +1,39 @@
 ---
 layout: layouts/base.njk
 title: Home
-eleventyNavigation:
-  key: Home
-  order: 1
+pagination:
+  data: collections.posts
+  size: 10
+  reverse: true
+  alias: posts
 ---
-<p>Number of episodes posted: {{ collections.posts.length }}</p>
 
-{%- for post in collections.posts -%}
-  <p>{{ post.templateContent | safe }}</p>
+{%- for post in pagination.items -%}
+{%- if post.data.published -%}
+<div class="post-container">
+  <div class="post-lcars-top">
+    <div class="post-lcars-top-left"></div>
+    <div class="post-lcars-top-fill"></div>
+    <span class="post-lcars-title">
+        {{ post.data.title }}
+    </span>
+    <div class="post-lcars-top-right"></div>
+  </div>
+  <div class="post-lcars-middle">
+    <div class="post-lcars-left-bar"></div>
+      <div class="post-body">
+        <div class="post-iframe">
+          {{ post.templateContent | safe }}
+        </div>
+        <div class="post-desc"> 
+          <p>{{ post.data.title }}</p>
+          <p>Earth Date: {{ post.date | readableDate }} </p>
+          <p>{{ post.data.description }}</p>
+        </div>
+    </div>
+  </div>
+</div>
+{%- endif -%}
 {%- endfor -%}
 
 

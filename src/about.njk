@@ -6,8 +6,22 @@ eleventyNavigation:
   order: 2
 ---
 
-{%- for post in collections.posts -%}
-  <p>{{ post.templateContent | safe }}</p>
+{%- for bio in collections.bios -%}
+
+<div class="post-container">
+  <div class="post-lcars-top">
+    <div class="post-lcars-top-left"></div>
+    <div class="post-lcars-top-fill"></div>
+    <span class="post-lcars-title">
+        {{ bio.data.title }}
+    </span>
+    <div class="post-lcars-top-right"></div>
+  </div>
+  <div class="post-lcars-middle">
+    <div class="post-lcars-left-bar"></div>
+      <div class="post-body">
+        <p>{{ bio.data.bio | safe }}</p>
+    </div>
+  </div>
+</div>
 {%- endfor -%}
-
-

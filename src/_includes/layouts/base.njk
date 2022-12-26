@@ -6,14 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/images/combadge.svg">
   <link rel="stylesheet" href="/styles/main.css">
-  <!-- <link rel="stylesheet" href="./styles/stars.css"> -->
   <title>{{ site.title }}</title>
 </head>
 <body>
 {% include "layouts/header.njk" %}
 {% include "layouts/navbar.njk" %}
-<!-- Grab the content from the page data, dump it here, and mark it as safe -->
-<!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe -->
 <div class="content">
   {{ content | safe }}
 </div>
