@@ -160,13 +160,13 @@ nav {
   max-width: 60%;
   margin: auto;
   margin-top: 1em;
-  height: 5rem;
+  height: 80px;
   display: flex;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 nav > div {
-  height: 3rem;
+  height: 48px;
 }
 .navbar-left {
   position: relative;
@@ -187,7 +187,7 @@ span.navbar-title {
   line-height: 0;
   width: auto;
   color: goldenrod;
-  font-size: 3rem;
+  font-size: 56px;
   font-family: "antonio-bold";
   text-transform: uppercase;
   margin-left: 0.25rem;
@@ -196,7 +196,7 @@ span.navbar-title {
 span.navbar-title::after {
   content: "";
   display: inline-block;
-  height: 2.75rem;
+  height: 48px;
 }
 .navbar-right {
   position: relative;
@@ -252,12 +252,12 @@ p.nav-button-label {
   position: relative;
   max-width: 100%;
   margin: 0;
-  height: 2rem;
+  height: 32px;
   display: flex;
   padding: 0;
 }
 .post-lcars-top > div {
-  height: 2rem;
+  height: 32px;
 }
 .post-lcars-top-left {
   width: 10%;
@@ -278,7 +278,7 @@ span.post-lcars-title {
   width: auto;
   color: goldenrod;
   background-color: black;
-  font-size: 2rem;
+  font-size: 36px;
   font-family: "antonio-bold";
   text-decoration: none;
   text-transform: uppercase;
