@@ -1,0 +1,70 @@
+<nav class="paginator-container">
+  <div class="paginator-flex">
+      {% if page.url != pagination.href.first %}
+        <a href="{{ pagination.href.first }}">
+          <button class="paginator-button left">
+            First
+          </button>
+        </a>
+      {% else %}
+        <button class="paginator-button left">
+          First
+        </button>
+      {% endif %}
+      
+
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}">
+          <button class="paginator-button">
+            Prev
+          </button>
+        </a>
+      {% else %}
+        <button class="paginator-button">
+          Prev
+        </button>
+      {% endif %}
+
+      {% for pageEntry in pagination.pages %}
+        {% if page.url ==  pagination.hrefs[loop.index0] %} 
+          <a href="{{ pagination.hrefs[loop.index0] }}" aria-current="page">
+            <button class="paginator-button-selected">
+              {{ loop.index }}
+            </button>
+          </a>
+        {% else %}
+          <a href="{{ pagination.hrefs[loop.index0] }}">
+            <button class="paginator-button">
+              {{ loop.index }}
+            </button>
+          </a>
+        {% endif %}
+      {% endfor %}
+
+
+      {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}">
+          <button class="paginator-button">
+            Next
+          </button>
+        </a>
+      {% else %}
+        <button class="paginator-button">
+          Next
+        </button>
+      {% endif %}
+
+
+      {% if page.url != pagination.href.last %}
+        <a href="{{ pagination.href.last }}">
+          <button class="paginator-button right">
+            Last
+          </button>
+        </a>
+      {% else %}
+        <button class="paginator-button right">
+          Last
+        </button>
+      {% endif %}
+  </div>
+</nav>

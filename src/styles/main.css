@@ -88,7 +88,7 @@ h3 {
   text-align: left;
   font-family: "FederationTNGTitle";
   color: rgb(153, 204, 255);
-  text-shadow: 2px 2px rgb(80, 80, 80);
+  text-shadow: 2px 2px #385780;
   line-height: 1;
   font-size: 6em;
   font-size: 8vw;
@@ -97,7 +97,7 @@ h3 {
   text-align: right;
   font-family: "FederationTNGTitle";
   color: rgb(153, 204, 255);
-  text-shadow: 2px 2px rgb(80, 80, 80);
+  text-shadow: 2px 2px #385780;
   line-height: 1;
   font-size: 6em;
   font-size: 8vw;
@@ -105,7 +105,7 @@ h3 {
 .subtitle {
   font-family: "crilleeeflight";
   color: rgb(153, 204, 255);
-  text-shadow: 2px 2px rgb(80, 80, 80);
+  text-shadow: 2px 2px #385780;
   font-size: 1.5rem;
   font-size: 2vw;
   position: relative;
@@ -179,8 +179,8 @@ nav > div {
 .navbar-fill {
   position: relative;
   background-color: goldenrod;
-  margin-left: 0.25rem;
   flex-grow: 100;
+  margin-left: 0.25rem;
 }
 span.navbar-title {
   display: inline-block;
@@ -252,25 +252,37 @@ p.nav-button-label {
   position: relative;
   max-width: 100%;
   margin: 0;
-  height: 32px;
+  height: 42px;
   display: flex;
   padding: 0;
+  background-color: black;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
 }
-.post-lcars-top > div {
-  height: 32px;
-}
+
 .post-lcars-top-left {
   width: 10%;
   background-color: goldenrod;
   position: relative;
-  border-top-left-radius: 3rem;
-  margin-left: 0.25rem;
+  border-top-left-radius: 48px;
+  height: 42px;
+}
+.post-lcars-top-left::after {
+  right: 0;
+  top: 24px;
+  border-top-left-radius: 16px;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 48px;
+  background: #000;
 }
 .post-lcars-top-fill {
   position: relative;
   background-color: goldenrod;
-  margin-left: 0.25rem;
   flex-grow: 100;
+  height: 24px;
 }
 span.post-lcars-title {
   display: inline-block;
@@ -283,17 +295,19 @@ span.post-lcars-title {
   text-decoration: none;
   text-transform: uppercase;
   padding-left: 0.25rem;
+  height: 24px;
 }
 span.post-lcars-title::after {
   content: "";
   display: inline-block;
-  height: 2rem;
+  height: 32px;
 }
 .post-lcars-top-right {
   position: relative;
-  border-top-right-radius: 3rem;
+  border-top-right-radius: 48px;
   background-color: goldenrod;
   width: 10%;
+  height: 24px;
 }
 .post-lcars-middle {
   position: relative;
@@ -308,7 +322,117 @@ span.post-lcars-title::after {
   height: auto;
   background-color: goldenrod;
   position: relative;
-  margin-left: 0.25rem;
+}
+.post-lcars-left-bar::before {
+  top: 0;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #000;
+}
+.post-lcars-left-bar::after {
+  right: 0;
+  top: 0;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 100%;
+  background: #000;
+}
+.post-lcars-top {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  height: 42px;
+  display: flex;
+  padding: 0;
+  background-color: black;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+}
+.post-lcars-bottom {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  height: 42px;
+  display: flex;
+  padding: 0;
+  background-color: black;
+  border-bottom-left-radius: 48px;
+  border-bottom-right-radius: 24px;
+}
+.post-lcars-bottom-left {
+  width: 10%;
+  background-color: goldenrod;
+  position: relative;
+  border-bottom-left-radius: 48px;
+  height: 42px;
+}
+.post-lcars-bottom-left::after {
+  right: 0;
+  bottom: 16px;
+  border-bottom-left-radius: 16px;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 42px;
+  background: #000;
+}
+.post-lcars-bottom-left {
+  width: 10%;
+  background-color: goldenrod;
+  position: relative;
+  border-bottom-left-radius: 48px;
+  height: 42px;
+}
+.post-lcars-bottom-left::after {
+  right: 0;
+  bottom: 16px;
+  border-bottom-left-radius: var(--inner-corner-var);
+  content: '';
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 42px;
+  background: #000;
+}
+.post-lcars-bottom-fill {
+  position: relative;
+  background-color: goldenrod;
+  flex-grow: 100;
+  height: 16px;
+  align-self: flex-end;
+}
+span.post-lcars-bottom-title {
+  display: inline-block;
+  line-height: 0;
+  width: auto;
+  color: goldenrod;
+  background-color: black;
+  font-size: 36px;
+  font-family: "antonio-bold";
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 0.25rem;
+  height: 24px;
+  align-self: center;
+}
+span.post-lcars-bottom-title::after {
+  content: "";
+  display: inline-block;
+  height: 32px;
+}
+.post-lcars-bottom-right {
+  position: relative;
+  border-bottom-right-radius: 48px;
+  background-color: goldenrod;
+  width: 10%;
+  height: 16px;
+  align-self: flex-end;
 }
 .post-body {
   background-color: black;
@@ -317,17 +441,118 @@ span.post-lcars-title::after {
   float: left;
   padding: 1rem;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .post-iframe {
   position: relative;
+  flex-shrink: 5;
+  max-width: 200px;
+  margin: 1rem;
 }
 .post-desc {
+  align-items: baseline;
+  flex-wrap: wrap;
   position: relative;
   text-align: left;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 1rem;
+  margin: 1rem;
+  font-family: monospace;
+  font-size: 1rem;
+  display: flex;
+  max-width: 360px;
 }
+.post-desc div {
+  margin: 0.25rem;
+}
+.post-tag {
+  font-family: "antonio-bold";
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+  margin-right: 0.25rem;
+  display: inline-block;
+  border-radius: 9999px;
+  background-color: goldenrod;
+  color: black;
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.post-tag:hover {
+  color: white;
+}
+
+.paginator-container {
+  position: relative;
+  margin: auto;
+  margin-top: 1em;
+  height: 60px;
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: center;
+}
+
+.paginator-flex {
+  display: inline-flex;
+  height: 60px;
+}
+
+.paginator-button {
+  border: none;
+  height: 60px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: black;
+  background-color: goldenrod;
+  cursor: pointer;
+  margin-left: 0.25rem;
+  font-family: "antonio";
+  text-transform: uppercase;
+}
+
+.paginator-button img {
+  width: auto;
+}
+
+.paginator-button:hover {
+  color: white;
+}
+
+.paginator-button-selected {
+  border: none;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: rgb(168, 128, 25);
+  cursor: pointer;
+  height: 60px;
+  margin-left: 0.25rem;
+  font-family: "antonio";
+  text-transform: uppercase;
+}
+
+.left {
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  width: 70px;
+  padding-right: 0;
+}
+
+.right {
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  width: 70px;
+  padding-left: 0;
+}
+
 /* Footer Stuff */
 footer {
   position: relative;

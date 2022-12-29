@@ -3,7 +3,7 @@ layout: layouts/base.njk
 title: Home
 pagination:
   data: collections.posts
-  size: 10
+  size: 1
   reverse: true
   alias: posts
 ---
@@ -25,15 +25,29 @@ pagination:
         <div class="post-iframe">
           {{ post.templateContent | safe }}
         </div>
-        <div class="post-desc"> 
-          <p>{{ post.data.title }}</p>
-          <p>Earth Date: {{ post.date | readableDate }} </p>
-          <p>{{ post.data.description }}</p>
+        <div class="post-desc">
+          <div>Podcast Number: {{ post.data.podnum }}</div><div>Recording Date: {{ post.date | readableDate }}</div>
+          <div>Episode Title: {{ post.data.eptitle }}</div>
+          <div>Series: {{post.data.series}}</div><div>Season: {{ post.data.season}}</div><div>Episode: {{ post.data.episode}}</div>
+          <div>Original Airdate: {{ post.data.airdate | readableDate }}</div>
+          <div>{{ post.data.description }}</div>
+          {% for tag in post.data.tags %}
+            {% if tag != "posts" %}
+              <a href="/tags/{{ tag }}" class="">
+                <div class="post-tag">{{ tag }}</div>
+              </a>
+            {% endif %}
+          {% endfor %}
         </div>
     </div>
+  </div>
+  <div class="post-lcars-bottom">
+    <div class="post-lcars-bottom-left" style="--inner-corner-var: 0;"></div>
+    <div class="post-lcars-bottom-fill"></div>
+    <div class="post-lcars-bottom-right"></div>
   </div>
 </div>
 {%- endif -%}
 {%- endfor -%}
 
-
+{% include "layouts/paginator.njk" %}

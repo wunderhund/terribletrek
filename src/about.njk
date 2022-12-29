@@ -1,27 +1,49 @@
 ---
 layout: layouts/base.njk
 title: About
-eleventyNavigation:
-  key: About
-  order: 2
 ---
-
-{%- for bio in collections.bios -%}
 
 <div class="post-container">
   <div class="post-lcars-top">
     <div class="post-lcars-top-left"></div>
     <div class="post-lcars-top-fill"></div>
     <span class="post-lcars-title">
-        {{ bio.data.title }}
+        {{ craig.name }}
     </span>
     <div class="post-lcars-top-right"></div>
   </div>
   <div class="post-lcars-middle">
     <div class="post-lcars-left-bar"></div>
       <div class="post-body">
-        <p>{{ bio.data.bio | safe }}</p>
+        <div>{{ craig.bio | safe }}</div>
+        <div style="width: 150px;"><img src="/images/Craig.svg"></div>
     </div>
   </div>
+  <div class="post-lcars-bottom">
+    <div class="post-lcars-bottom-left" style="--inner-corner-var: 16px;"></div>
+    <div class="post-lcars-bottom-fill"></div>
+    <div class="post-lcars-bottom-right"></div>
+  </div>
 </div>
-{%- endfor -%}
+<div class="post-container" style="margin-top: 0.5rem;">
+  <div class="post-lcars-top">
+    <div class="post-lcars-top-left"></div>
+    <div class="post-lcars-top-fill"></div>
+    <div class="post-lcars-top-right"></div>
+  </div>
+  <div class="post-lcars-middle">
+    <div class="post-lcars-left-bar"></div>
+      <div class="post-body">
+        <div>{{ klop.bio | safe }}</div>
+        <div style="width: 200px;"><img src="/images/Klop.svg"></div>
+    </div>
+  </div>
+  <div class="post-lcars-bottom">
+    <div class="post-lcars-bottom-left" style="--inner-corner-var: 16px;"></div>
+    <div class="post-lcars-bottom-fill"></div>
+    <span class="post-lcars-bottom-title">
+        {{ klop.name }}
+    </span>
+    <div class="post-lcars-bottom-right"></div>
+  </div>
+</div>
