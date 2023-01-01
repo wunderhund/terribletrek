@@ -1,4 +1,20 @@
 {
     "name": "Craig",
-    "bio": "Craig was born. Then awesome stuff happened."
+    "bio": "Craig grew up watching the Original Series with his dad, and began watching TNG as soon as it came out. was born. He met Klop in middle school, and their combined nerdery led to a lifetime of Star Trek fandom.",
+    "faves": {
+        "show": "DS9",
+        "honorable mentions": "Babylon 5, The Orville",
+        "episode": "“Far Beyond the Stars” (DS9)",
+        "movie": "STVI: The Undiscovered Country",
+        "character": "Garak",
+        "doctor": "McCoy",
+        "starship": "USS Defiant",
+        "line of dialogue": "“It's best not to dwell on such minutiae.”",
+        "other favorite line": "“Mr. Sklar... returned to the surface.”",
+        "official book": "Star Trek The Next Generation Technical Manual",
+        "novel": "Prime Directive by Judith and Garfield Reeves-Stevens",
+        "poster": "Star Trek Master System Display",
+        "holodeck program": "Captain Proton",
+        "Star Trek memory": "Klop and I laughing our asses off when the phased Romulan ends up getting knocked out into space in “The Next Phase”"
+    }
 }

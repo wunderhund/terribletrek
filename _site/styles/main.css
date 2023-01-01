@@ -84,6 +84,17 @@ h3 {
 }
 
 /* Header Stuff */
+.titlebox {
+  position: relative;
+  max-width: 60%;
+  margin: auto;
+  padding-top: 5%;
+}
+@media (max-width: 500px) {
+  .titlebox {
+    max-width: 100%;
+  }
+}
 .title-left {
   text-align: left;
   font-family: "FederationTNGTitle";
@@ -93,6 +104,11 @@ h3 {
   font-size: 6em;
   font-size: 8vw;
 }
+@media (max-width: 500px) {
+  .title-left {
+    font-size: 12vw;
+  }
+}
 .title-right {
   text-align: right;
   font-family: "FederationTNGTitle";
@@ -101,6 +117,11 @@ h3 {
   line-height: 1;
   font-size: 6em;
   font-size: 8vw;
+}
+@media (max-width: 500px) {
+  .title-right {
+    font-size: 12vw;
+  }
 }
 .subtitle {
   font-family: "crilleeeflight";
@@ -115,11 +136,10 @@ h3 {
   width: 50%;
   z-index: 3;
 }
-.titlebox {
-  position: relative;
-  max-width: 60%;
-  margin: auto;
-  padding-top: 5%;
+@media (max-width: 500px) {
+  .subtitle {
+    font-size: 4vw;
+  }
 }
 .center-box {
   position: relative;
@@ -165,8 +185,18 @@ nav {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+@media (max-width: 500px) {
+  nav {
+    max-width: 95%;
+  }
+}
 nav > div {
   height: 48px;
+}
+@media (max-width: 500px) {
+  nav > div {
+    height: 36px;
+  }
 }
 .navbar-left {
   position: relative;
@@ -193,10 +223,20 @@ span.navbar-title {
   margin-left: 0.25rem;
   margin-right: -0.25rem;
 }
+@media (max-width: 500px) {
+  span.navbar-title {
+    font-size: 40px;
+  }
+}
 span.navbar-title::after {
   content: "";
   display: inline-block;
   height: 48px;
+}
+@media (max-width: 500px) {
+  span.navbar-title::after {
+    height: 36px;
+  }
 }
 .navbar-right {
   position: relative;
@@ -222,6 +262,11 @@ a.fill-div {
   color: black;
   font-size: 1rem;
 }
+@media (max-width: 500px) {
+  a.fill-div {
+    font-size: 0.75rem;
+  }
+}
 a.fill-div:hover {
   color: white;
 }
@@ -229,6 +274,11 @@ p.nav-button-label {
   text-transform: uppercase;
   line-height: 2.5;
   margin-left: 0.25rem;
+}
+@media (max-width: 500px) {
+  p.nav-button-label {
+    line-height: 2;
+  }
 }
 
 /* Content Box */
@@ -242,12 +292,27 @@ p.nav-button-label {
   margin-right: auto;
   width: 60%;
 }
+@media (max-width: 500px) {
+  .content {
+    width: 95%;
+  }
+}
 
 /* Post Styles */
 .post-container {
-  background-color: transparent;
+  background-color: black;
   margin-top: 2em;
+  border-radius: 48px;
 }
+@media (max-width: 500px) {
+  .post-container {
+    border-radius: 16px;
+    border-top-left-radius: 48px;
+    border-bottom-left-radius: 48px;
+    margin-top: 1rem;
+  }
+}
+/* Post LCARS Top */
 .post-lcars-top {
   position: relative;
   max-width: 100%;
@@ -271,18 +336,28 @@ p.nav-button-label {
   right: 0;
   top: 24px;
   border-top-left-radius: 16px;
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 16px;
   height: 48px;
   background: #000;
 }
+@media (max-width: 500px) {
+  .post-lcars-top-left::after {
+    top: 16px;
+  }
+}
 .post-lcars-top-fill {
   position: relative;
   background-color: goldenrod;
   flex-grow: 100;
   height: 24px;
+}
+@media (max-width: 500px) {
+  .post-lcars-top-fill {
+    height: 16px;
+  }
 }
 span.post-lcars-title {
   display: inline-block;
@@ -297,10 +372,20 @@ span.post-lcars-title {
   padding-left: 0.25rem;
   height: 24px;
 }
+@media (max-width: 500px) {
+  span.post-lcars-title {
+    font-size: 1rem;
+  }
+}
 span.post-lcars-title::after {
   content: "";
   display: inline-block;
   height: 32px;
+}
+@media (max-width: 500px) {
+  span.post-lcars-title::after {
+    height: 16px;
+  }
 }
 .post-lcars-top-right {
   position: relative;
@@ -309,6 +394,12 @@ span.post-lcars-title::after {
   width: 10%;
   height: 24px;
 }
+@media (max-width: 500px) {
+  .post-lcars-top-right {
+    height: 16px;
+  }
+}
+/* Post LCARS Middle */
 .post-lcars-middle {
   position: relative;
   max-width: 100%;
@@ -325,7 +416,7 @@ span.post-lcars-title::after {
 }
 .post-lcars-left-bar::before {
   top: 0;
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 100%;
@@ -335,24 +426,15 @@ span.post-lcars-title::after {
 .post-lcars-left-bar::after {
   right: 0;
   top: 0;
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 16px;
   height: 100%;
   background: #000;
 }
-.post-lcars-top {
-  position: relative;
-  max-width: 100%;
-  margin: 0;
-  height: 42px;
-  display: flex;
-  padding: 0;
-  background-color: black;
-  border-top-left-radius: 48px;
-  border-top-right-radius: 48px;
-}
+
+/* Post LCARS Bottom */
 .post-lcars-bottom {
   position: relative;
   max-width: 100%;
@@ -375,25 +457,7 @@ span.post-lcars-title::after {
   right: 0;
   bottom: 16px;
   border-bottom-left-radius: 16px;
-  content: '';
-  display: block;
-  position: absolute;
-  width: 16px;
-  height: 42px;
-  background: #000;
-}
-.post-lcars-bottom-left {
-  width: 10%;
-  background-color: goldenrod;
-  position: relative;
-  border-bottom-left-radius: 48px;
-  height: 42px;
-}
-.post-lcars-bottom-left::after {
-  right: 0;
-  bottom: 16px;
-  border-bottom-left-radius: var(--inner-corner-var);
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 16px;
@@ -444,11 +508,17 @@ span.post-lcars-bottom-title::after {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.post-iframe {
+.post-image {
   position: relative;
   flex-shrink: 5;
-  max-width: 200px;
+  max-width: 35%;
   margin: 1rem;
+}
+@media (max-width: 500px) {
+  .post-image {
+    max-width: 100%;
+    margin: 0;
+  }
 }
 .post-desc {
   align-items: baseline;
@@ -459,7 +529,13 @@ span.post-lcars-bottom-title::after {
   font-family: monospace;
   font-size: 1rem;
   display: flex;
-  max-width: 360px;
+  max-width: 50%;
+}
+@media (max-width: 500px) {
+  .post-desc {
+    max-width: 100%;
+    font-size: 0.75rem;
+  }
 }
 .post-desc div {
   margin: 0.25rem;
@@ -484,6 +560,199 @@ span.post-lcars-bottom-title::after {
   color: white;
 }
 
+/* About Page */
+/* Bio Top */
+.bio-lcars-top {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  height: 42px;
+  display: flex;
+  padding: 0;
+  background-color: black;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+}
+
+.bio-lcars-top-left {
+  width: 25%;
+  background-color: goldenrod;
+  position: relative;
+  border-top-left-radius: 48px;
+  height: 42px;
+}
+.bio-lcars-top-left::after {
+  right: 0;
+  top: 24px;
+  border-top-left-radius: 16px;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 18px;
+  background: #000;
+}
+.bio-lcars-top-fill {
+  position: relative;
+  background-color: goldenrod;
+  flex-grow: 100;
+  height: 24px;
+}
+span.bio-lcars-title {
+  display: inline-block;
+  line-height: 0;
+  width: auto;
+  color: goldenrod;
+  background-color: black;
+  font-size: 36px;
+  font-family: "antonio-bold";
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 0.25rem;
+  height: 24px;
+}
+span.bio-lcars-title::after {
+  content: "";
+  display: inline-block;
+  height: 32px;
+}
+.bio-lcars-top-right {
+  position: relative;
+  border-top-right-radius: 48px;
+  background-color: goldenrod;
+  width: 10%;
+  height: 24px;
+}
+p.bio-lcars-label {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  font-family: antonio;
+  color: black;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  p.bio-lcars-label {
+    font-size: 12px;
+  }
+}
+
+/* Bio Middle */
+.bio-lcars-about {
+  display: grid;
+  grid-template-columns: 20% 50% 25%;
+  background-color: black;
+}
+.faves-lcars-left-bar {
+  width: 100%;
+  height: auto;
+  background-color: goldenrod;
+  position: relative;
+}
+.bio-lcars-faves {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  background-color: black;
+}
+.fave-tag {
+  position: relative;
+  font-family: "antonio-bold";
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  background-color: goldenrod;
+  color: black;
+  height: 3rem;
+}
+@media (max-width: 500px) {
+  .fave-tag {
+    height: 2rem;
+  }
+}
+.fave-tag:hover {
+  color: white;
+}
+
+.fave-desc {
+  text-align: left;
+  display: flex;
+  align-items: flex-end;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 500px) {
+  .fave-desc {
+    font-size: 12px;
+  }
+}
+
+/* Bio LCARS Bottom */
+.bio-lcars-bottom {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  height: 42px;
+  display: flex;
+  padding: 0;
+  background-color: black;
+  border-bottom-left-radius: 48px;
+  border-bottom-right-radius: 24px;
+  margin-top: 0.5rem;
+}
+.bio-lcars-bottom-left {
+  width: 25%;
+  background-color: goldenrod;
+  position: relative;
+  border-bottom-left-radius: 48px;
+  height: 42px;
+}
+.bio-lcars-bottom-left::after {
+  right: 0;
+  bottom: 16px;
+  border-bottom-left-radius: 16px;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 26px;
+  background: #000;
+}
+.bio-lcars-bottom-fill {
+  position: relative;
+  background-color: goldenrod;
+  flex-grow: 100;
+  height: 16px;
+  align-self: flex-end;
+}
+span.bio-lcars-bottom-title {
+  display: inline-block;
+  line-height: 0;
+  width: auto;
+  color: goldenrod;
+  background-color: black;
+  font-size: 36px;
+  font-family: "antonio-bold";
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 0.25rem;
+  height: 24px;
+  align-self: center;
+}
+span.bio-lcars-bottom-title::after {
+  content: "";
+  display: inline-block;
+  height: 32px;
+}
+.bio-lcars-bottom-right {
+  position: relative;
+  border-bottom-right-radius: 48px;
+  background-color: goldenrod;
+  width: 10%;
+  height: 16px;
+  align-self: flex-end;
+}
+
+/* Paginator */
 .paginator-container {
   position: relative;
   margin: auto;
@@ -514,6 +783,13 @@ span.post-lcars-bottom-title::after {
   font-family: "antonio";
   text-transform: uppercase;
 }
+@media (max-width: 500px) {
+  .paginator-button {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 12px;
+  }
+}
 
 .paginator-button img {
   width: auto;
@@ -538,6 +814,13 @@ span.post-lcars-bottom-title::after {
   font-family: "antonio";
   text-transform: uppercase;
 }
+@media (max-width: 500px) {
+  .paginator-button-selected {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 12px;
+  }
+}
 
 .left {
   border-top-left-radius: 3rem;
@@ -545,12 +828,22 @@ span.post-lcars-bottom-title::after {
   width: 70px;
   padding-right: 0;
 }
+@media (max-width: 500px) {
+  .left {
+    width: 36px;
+  }
+}
 
 .right {
   border-top-right-radius: 3rem;
   border-bottom-right-radius: 3rem;
   width: 70px;
   padding-left: 0;
+}
+@media (max-width: 500px) {
+  .right {
+    width: 36px;
+  }
 }
 
 /* Footer Stuff */
@@ -566,6 +859,11 @@ footer {
   background-color: black;
   font-size: 0.7em;
   color: #889ab3;
+}
+@media (max-width: 500px) {
+  footer {
+    width: 95%;
+  }
 }
 footer a:link,
 footer a:visited,

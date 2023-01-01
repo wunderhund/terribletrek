@@ -2,48 +2,78 @@
 layout: layouts/base.njk
 title: About
 ---
-
 <div class="post-container">
-  <div class="post-lcars-top">
-    <div class="post-lcars-top-left"></div>
-    <div class="post-lcars-top-fill"></div>
-    <span class="post-lcars-title">
-        {{ craig.name }}
-    </span>
-    <div class="post-lcars-top-right"></div>
-  </div>
-  <div class="post-lcars-middle">
-    <div class="post-lcars-left-bar"></div>
-      <div class="post-body">
-        <div>{{ craig.bio | safe }}</div>
-        <div style="width: 150px;"><img src="/images/Craig.svg"></div>
-    </div>
-  </div>
-  <div class="post-lcars-bottom">
-    <div class="post-lcars-bottom-left" style="--inner-corner-var: 16px;"></div>
-    <div class="post-lcars-bottom-fill"></div>
-    <div class="post-lcars-bottom-right"></div>
-  </div>
-</div>
-<div class="post-container" style="margin-top: 0.5rem;">
-  <div class="post-lcars-top">
-    <div class="post-lcars-top-left"></div>
-    <div class="post-lcars-top-fill"></div>
-    <div class="post-lcars-top-right"></div>
-  </div>
-  <div class="post-lcars-middle">
-    <div class="post-lcars-left-bar"></div>
-      <div class="post-body">
-        <div>{{ klop.bio | safe }}</div>
-        <div style="width: 200px;"><img src="/images/Klop.svg"></div>
-    </div>
-  </div>
-  <div class="post-lcars-bottom">
-    <div class="post-lcars-bottom-left" style="--inner-corner-var: 16px;"></div>
-    <div class="post-lcars-bottom-fill"></div>
-    <span class="post-lcars-bottom-title">
+  <div class="bio-lcars-top">
+    <div class="bio-lcars-top-left"></div>
+    <div class="bio-lcars-top-fill"></div>
+    <span class="bio-lcars-title">
         {{ klop.name }}
     </span>
-    <div class="post-lcars-bottom-right"></div>
+    <div class="bio-lcars-top-right"></div>
+  </div>
+
+  <div class="bio-lcars-about">
+    <div class="faves-lcars-left-bar">
+      <p class="bio-lcars-label">About</p>
+    </div>
+    <div class="fave-desc">{{ klop.bio | safe }}</div>
+    <div><img src="/images/Klop.svg"></div>
+  </div>
+
+  <div class="bio-lcars-faves">
+    {% for fave, answer in klop.faves %}
+      <div class="fave-tag">
+        <p class="bio-lcars-label">
+          {{ fave }}
+      </div>
+      <div class="fave-desc">
+        {{ answer}}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="bio-lcars-bottom">
+    <div class="bio-lcars-bottom-left"></div>
+    <div class="bio-lcars-bottom-fill"></div>
+    <div class="bio-lcars-bottom-right"></div>
   </div>
 </div>
+
+<div class="post-container">
+  <div class="bio-lcars-top">
+    <div class="bio-lcars-top-left"></div>
+    <div class="bio-lcars-top-fill"></div>
+    <span class="bio-lcars-title">
+        {{ craig.name }}
+    </span>
+    <div class="bio-lcars-top-right"></div>
+  </div>
+
+  <div class="bio-lcars-about">
+    <div class="faves-lcars-left-bar">
+      <p class="bio-lcars-label">About</p>
+    </div>
+    <div class="fave-desc">{{ craig.bio | safe }}</div>
+    <div><img src="/images/Craig.svg"></div>
+  </div>
+
+  <div class="bio-lcars-faves">
+    {% for fave, answer in craig.faves %}
+      <div class="fave-tag">
+        <p class="bio-lcars-label">
+          {{ fave }}
+      </div>
+      <div class="fave-desc">
+        {{ answer }}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="bio-lcars-bottom">
+    <div class="bio-lcars-bottom-left"></div>
+    <div class="bio-lcars-bottom-fill"></div>
+    <div class="bio-lcars-bottom-right"></div>
+  </div>
+</div>
+
+

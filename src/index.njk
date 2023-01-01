@@ -3,7 +3,7 @@ layout: layouts/base.njk
 title: Home
 pagination:
   data: collections.posts
-  size: 1
+  size: 10
   reverse: true
   alias: posts
 ---
@@ -22,7 +22,7 @@ pagination:
   <div class="post-lcars-middle">
     <div class="post-lcars-left-bar"></div>
       <div class="post-body">
-        <div class="post-iframe">
+        <div class="post-image">
           {{ post.templateContent | safe }}
         </div>
         <div class="post-desc">
@@ -42,7 +42,7 @@ pagination:
     </div>
   </div>
   <div class="post-lcars-bottom">
-    <div class="post-lcars-bottom-left" style="--inner-corner-var: 0;"></div>
+    <div class="post-lcars-bottom-left"></div>
     <div class="post-lcars-bottom-fill"></div>
     <div class="post-lcars-bottom-right"></div>
   </div>
