@@ -10,6 +10,7 @@ eleventyComputed:
 ---  
 
 {% for post in collections[tag] %}
+{%- if post.data.published -%}
   <div class="post-container">
     <div class="post-lcars-top">
       <div class="post-lcars-top-left"></div>
@@ -46,6 +47,6 @@ eleventyComputed:
       <div class="post-lcars-bottom-fill"></div>
       <div class="post-lcars-bottom-right"></div>
     </div>
-
   </div>
+{% endif %}
 {% endfor %}
