@@ -5,12 +5,7 @@ module.exports = function(eleventyConfig) {
   // Copy `src/robots.txt` to `_site/robots.txt`
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
-  // Copy `src/images/combadge.svg` to `_site/images/combadge.svg`
-  // eleventyConfig.addPassthroughCopy("./src/images/combadge.svg");
-  // eleventyConfig.addPassthroughCopy("./src/images/Klop.svg");
-  // eleventyConfig.addPassthroughCopy("./src/images/Craig.svg");
-  // eleventyConfig.addPassthroughCopy("./src/images/TerribleTrek.svg");
-  // eleventyConfig.addPassthroughCopy("./src/images/background.jpg");
+  // Copy `src/images/*` to `_site/images/*`
   eleventyConfig.addPassthroughCopy("./src/images/*");
 
   // Copy `src/styles/main.css` to `_site/styles/main.css`
@@ -47,7 +42,7 @@ module.exports = function(eleventyConfig) {
       input: "src",
       includes: "_includes",
       data: "_data",
-      output: "_site"
+      output: "public"
     }
   };
 };

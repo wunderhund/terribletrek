@@ -440,11 +440,11 @@ span.post-lcars-title {
 @media (max-width: 500px) {
   span.post-lcars-title {
     font-size: 1rem;
-    -webkit-transform: scale(1,1.5);
-    -moz-transform: scale(1,1.5);
-    -ms-transform: scale(1,1.5);
-    -o-transform: scale(1,1.5);
-    transform: scale(1,1.5);
+    -webkit-transform: scale(1, 1.5);
+    -moz-transform: scale(1, 1.5);
+    -ms-transform: scale(1, 1.5);
+    -o-transform: scale(1, 1.5);
+    transform: scale(1, 1.5);
     background-color: transparent;
   }
 }

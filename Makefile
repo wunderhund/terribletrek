@@ -26,7 +26,7 @@ shell:
 
 .PHONY: clean
 clean:
-	$(BASH) -c 'rm -rf _site'
+	$(BASH) -c 'rm -rf public'
 
 .PHONY: test
 test:
