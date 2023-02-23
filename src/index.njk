@@ -26,7 +26,7 @@ pagination:
           {{ post.templateContent | safe }}
         </div>
         <div class="post-desc">
-          <div>Podcast Number: {{ post.data.podnum }}</div><div>Recording Date: {{ post.date | readableDate }}</div>
+          <div>Podcast Number: {{ post.data.podnum }}</div><div>Recording Date: {{ post.data.recorded | readableDate }}</div>
           <div>Episode Title: {{ post.data.eptitle }}</div>
           <div>Series: {{post.data.series}}</div><div>Season: {{ post.data.season}}</div><div>Episode: {{ post.data.episode}}</div>
           <div>Original Airdate: {{ post.data.airdate | readableDate }}</div>
