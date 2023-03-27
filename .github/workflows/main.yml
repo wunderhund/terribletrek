@@ -1,8 +1,9 @@
 name: deploy-container
 
 on:
-  schedule:
-    - cron: "0 5 * * 0"
+  push:
+    branches:
+      - main
 
 jobs:
   build:
